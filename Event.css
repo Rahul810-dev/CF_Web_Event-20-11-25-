@@ -241,3 +241,59 @@
   }
 }
 
+
+.animated-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border: 0;
+  font-size: 16px;
+  background-color: #111;
+  color: #ffc451;
+  border-radius: 100px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;        /* Since it's an <a> now */
+  transition: all 0.6s cubic-bezier(0.23,1,0.32,1);
+}
+
+/* Circle ripple animation remains */
+.animated-button .circle {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background-color: #ffc451;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23,1,0.32,1);
+}
+
+/* TEXT stays fixed (no movement) */
+.animated-button .text {
+  position: relative;
+  z-index: 2;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Hover effect */
+.animated-button:hover {
+  background-color: #ffc451;
+  color: #000;
+  border-radius: 12px;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+/* Click effect */
+.animated-button:active {
+  transform: scale(0.95);
+}

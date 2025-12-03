@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Events</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Meetup.css" />
+  </head>
+  <body class="container bg-light">
+    <div class="px-4 pt-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold text-body-emphasis">Our Community Events</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4 text-body-emphasis">
+          Weekly meetups, monthly contests, seasonal challenges and more...
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <button class="animated-button" onclick="window.location.href='./index.html'">
+            <span class="text">View Events</span>
+            <span class="circle"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-4 pt-5 text-center">
+      <h3 class="display-5 fw-bold text-body-emphasis">Weekly Meetups</h3>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4 text-body-emphasis">
+          Every week we gather to learn ,share our thoughts togather...
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container justify-content-center">
+          <div class="stagger-dropdown" id="yearDropdown">
+            <button
+              class="stagger-btn"
+              id="yearToggle"
+              aria-expanded="false"
+              aria-controls="yearMenu"
+            >
+              <span>2025</span>
+              <i
+                class="fa-solid fa-chevron-down stagger-icon"
+                aria-hidden="true"
+              ></i>
+            </button>
+
+            <ul
+              class="stagger-menu"
+              id="yearMenu"
+              role="menu"
+              aria-hidden="true"
+            >
+              <li class="stagger-item" role="menuitem" tabindex="-1">2023</li>
+              <li class="stagger-item" role="menuitem" tabindex="-1">2024</li>
+              <li class="stagger-item" role="menuitem" tabindex="-1">2025</li>
+            </ul>
+          </div>
+
+          <form id="searchForm" class="d-flex mx-3" role="search">
+            <div class="search-box">
+              <input
+                id="searchInput"
+                class="form-control"
+                type="search"
+                placeholder="Type week number to get to know about specific week"
+                aria-label="Search"
+              />
+              <!-- Icon instead of button -->
+              <span class="search-icon"> <i class="fas fa-search"></i> </span>
+            </div>
+          </form>
+          
+        </div>
+      </nav>
+
+      <div class="meetup-carousel-container">
+        <button class="carousel-btn prev">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <div class="meetup-carousel">
+          <!-- Slide Track -->
+          <div class="meetup-track">
+            <!-- 5 cards total -->
+            <div
+              class="meetup-card"
+              style="
+                background-image: url('./Assets/Meetup1.jpg');
+              "
+            >
+              <div class="meetup-overlay">
+                <span class="meetup-tag">Weekly Meetup</span>
+                <h3 class="meetup-title">Meetup #54</h3>
+                <p class="meetup-date">September 18, 2025</p>
+                <button
+                  class="dot-expand-btn group flex h-10 items-center gap-2 rounded-full bg-neutral-200 pl-3 pr-4 transition-all duration-300 ease-in-out hover:bg-black hover:pl-2 hover:text-white active:bg-neutral-700"
+                >
+                  <span
+                    class="rounded-full bg-black p-1 text-sm transition-colors duration-300 group-hover:bg-white"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="-translate-x-[200%] text-[0px] transition-all duration-300 group-hover:translate-x-0 group-hover:text-lg group-hover:text-black group-active:-rotate-45"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                  <span>click for more info</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="meetup-card"
+              style="
+                background-image: url('./Assets/Meetup2.jpg');
+              "
+            >
+              <div class="meetup-overlay">
+                <span class="meetup-tag">Weekly Meetup</span>
+                <h3 class="meetup-title">Meetup #55</h3>
+                <p class="meetup-date">September 25, 2025</p>
+                <button
+                  class="dot-expand-btn group flex h-10 items-center gap-2 rounded-full bg-neutral-200 pl-3 pr-4 transition-all duration-300 ease-in-out hover:bg-black hover:pl-2 hover:text-white active:bg-neutral-700"
+                >
+                  <span
+                    class="rounded-full bg-black p-1 text-sm transition-colors duration-300 group-hover:bg-white"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="-translate-x-[200%] text-[0px] transition-all duration-300 group-hover:translate-x-0 group-hover:text-lg group-hover:text-black group-active:-rotate-45"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                  <span>click for more info</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="meetup-card"
+              style="
+                background-image: url('./Assets/Meetup1.jpg');
+              "
+            >
+              <div class="meetup-overlay">
+                <span class="meetup-tag">Weekly Meetup</span>
+                <h3 class="meetup-title">Meetup #56</h3>
+                <p class="meetup-date">October 2, 2025</p>
+                <button
+                  class="dot-expand-btn group flex h-10 items-center gap-2 rounded-full bg-neutral-200 pl-3 pr-4 transition-all duration-300 ease-in-out hover:bg-black hover:pl-2 hover:text-white active:bg-neutral-700"
+                >
+                  <span
+                    class="rounded-full bg-black p-1 text-sm transition-colors duration-300 group-hover:bg-white"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="-translate-x-[200%] text-[0px] transition-all duration-300 group-hover:translate-x-0 group-hover:text-lg group-hover:text-black group-active:-rotate-45"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                  <span>click for more info</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="meetup-card"
+              style="
+                background-image: url('./Assets/Meetup2.jpg');
+              "
+            >
+              <div class="meetup-overlay">
+                <span class="meetup-tag">Weekly Meetup</span>
+                <h3 class="meetup-title">Meetup #57</h3>
+                <p class="meetup-date">October 9, 2025</p>
+                <button
+                  class="dot-expand-btn group flex h-10 items-center gap-2 rounded-full bg-neutral-200 pl-3 pr-4 transition-all duration-300 ease-in-out hover:bg-black hover:pl-2 hover:text-white active:bg-neutral-700"
+                >
+                  <span
+                    class="rounded-full bg-black p-1 text-sm transition-colors duration-300 group-hover:bg-white"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="-translate-x-[200%] text-[0px] transition-all duration-300 group-hover:translate-x-0 group-hover:text-lg group-hover:text-black group-active:-rotate-45"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                  <span>click for more info</span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="meetup-card"
+              style="
+                background-image: url('https://picsum.photos/400/225?random=14');
+              "
+            >
+              <div class="meetup-overlay">
+                <span class="meetup-tag">Weekly Meetup</span>
+                <h3 class="meetup-title">Meetup #58</h3>
+                <p class="meetup-date">October 16, 2025</p>
+                <button
+                  class="dot-expand-btn group flex h-10 items-center gap-2 rounded-full bg-neutral-200 pl-3 pr-4 transition-all duration-300 ease-in-out hover:bg-black hover:pl-2 hover:text-white active:bg-neutral-700"
+                >
+                  <span
+                    class="rounded-full bg-black p-1 text-sm transition-colors duration-300 group-hover:bg-white"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="-translate-x-[200%] text-[0px] transition-all duration-300 group-hover:translate-x-0 group-hover:text-lg group-hover:text-black group-active:-rotate-45"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                  <span>click for more info</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-btn next">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Meetup.js"></script>  
+  </body>
+</html>
